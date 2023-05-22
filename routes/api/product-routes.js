@@ -125,8 +125,8 @@ router.delete('/:id', (req, res) => {
       id: req.params.id 
     } 
   })
-  .then((products) => {
-    if (products === 0) {
+  .then((product) => {
+    if (product === 0) {
       // if no rows were affected, the product with the given ID was not found
       res.status(404).json({ error: 'Product not found' });
     } else {
